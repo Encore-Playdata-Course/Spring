@@ -1,0 +1,12 @@
+package running;
+
+
+public class RunTest {
+
+	public static void main(String[] args) {
+		//컨테이너 기능의 객체 생성
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//Person 객체 받아서 활용
+	}
+
+}

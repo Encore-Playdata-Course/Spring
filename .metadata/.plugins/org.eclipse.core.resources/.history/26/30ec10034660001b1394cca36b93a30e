@@ -1,0 +1,13 @@
+애노테이션 기반의 학습 내용
+
+1. 애노테이션으로 DI 설정
+
+2. 사용을 위한 셋팅
+	1. Spring context
+		- 애노테이션 사용 시 필수 Library
+		
+3. 개발 구조 (source 및 설정 파일)
+	1. src
+	2. 스프링 설정 파일
+		애노테이션 설정 등록
+		<context:annotation-config/>

@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	step01hello5.jsp : <br>
+	
+	1. controller에서 저장한 데에터 : ${requestScope.newData}
+	2. html에서 parameter(web query string)로 넘긴 데이터 : ${param.id}=${param.age}
+</body>
+</html>

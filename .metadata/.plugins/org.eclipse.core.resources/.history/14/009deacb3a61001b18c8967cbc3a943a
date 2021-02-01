@@ -1,0 +1,23 @@
+학습 내용
+
+1. MVC 기반의 Spring 개발 기술 습득
+
+2. 장점
+	코드가 굉장히 간소화
+	개발 속도 향상
+	표준화 끝장판
+3. 구현 기술
+	1. 설정 파일
+		1. web.xml
+		2. spring 자체 설정 파일
+		
+	2. controller
+		1. 애노테이션 베이스로 개발 절대 권장
+			@controller
+			
+		2. get/post 방식 요청 처리 또한 doGet or doPost 메소드가 아닌 애노테이션 설정된 일반 메소드가 처리
+		
+		3. forward/redirect 웹페이지 이동 방식도 문자열로 지정 또는 단순 return만으로 처리
+		
+		4. request.setAttribute("key",value) 동일한 형식의 API 제공
+		

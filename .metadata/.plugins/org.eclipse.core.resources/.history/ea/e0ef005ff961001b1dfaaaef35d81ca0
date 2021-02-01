@@ -1,0 +1,23 @@
+학습내용
+
+1. 실습 구조
+	html -> spring framework -> sub controller -> jsp
+	
+	
+2. 실습내용
+	1 단계
+		기본 애노테이션 학습
+		step01.html
+	
+	2 단계
+		URL Template
+		
+	3 단계
+		client의 상태 유지 기술
+
+3. 개념 및 기술
+	1. controller에서 redirect로 이동 시
+		: view를 직접 지정해서 실행
+		spring framework의 frontcontroller에게 view 정보 제공 없이 controller 에서 jsp로 이동
+		* jsp 파일의 위치는 반드시 WEB-INF하위에 존재하면 안됨!!!
+

@@ -1,0 +1,22 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+import model.domain.Team;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("myArt.xml");
+		Team
+		//step02 - 
+		Team cust1 = context.getBean("T", Team.class);
+		System.out.println(cust1.hashCode());			//Customer 주소 값만 출력
+		System.out.println(cust1.getCar().hashCode());	//
+		System.out.println(cust1.hashCode());			//Customer 주소 값만 출력
+		System.out.println(cust1.getCar2().hashCode());
+	}
+
+}

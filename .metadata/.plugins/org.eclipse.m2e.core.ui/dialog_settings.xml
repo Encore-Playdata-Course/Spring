@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="playdata"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="step09_SpringMVC"/>
+			<item value="test"/>
+			<item value="step08_webBasic"/>
+			<item value="step07_logAOP"/>
+			<item value="step06_AOPAnnotation"/>
+			<item value="step05_AOPSchema"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,11 @@
+package running;
+
+import model.DAO;
+
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println(DAO.getAll());
+	}
+
+}

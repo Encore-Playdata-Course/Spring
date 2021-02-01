@@ -1,0 +1,16 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//? 컨테이너 생성
+		ApplicationContext context = new ClassPathXmlApplicationContext("playdata.xml");
+		//? Car 빈객체
+		
+		
+	}
+
+}

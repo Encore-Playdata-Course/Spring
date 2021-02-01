@@ -1,0 +1,65 @@
+학습내용
+
+1. spring project 생성 단계 이해하기
+
+2. spring library 셋티
+
+	- 기본 설정 시
+		spring-context 로 검색해서 셋팅
+		
+3. 실습 내용
+	1. Customer 고객 관리 프로그램 이라 가정
+	2. 구조
+		Customer는 이름, 나이, 등급, 소유한 차 정보(차이름, 차 색, ...)
+		Car.java / Customer.java
+		- 반드시 고객은 차를 소유하고 있는 상황이라 가정
+			고객은 차 소유
+				고객은 차 정보 필수
+			차와 고객 관계에서 포함 관계의 설계
+				고객은 차를 포함하고 있다.(has a 관계)
+			: 차는 고객에 의존? 고객은 차에 의존?
+				프로그램 관전에선 고객은 차에 의존
+				(예시 : 차와 엔진 관계의 개별 클래스로 설계 시
+					Car.java/Engine.java
+					Car는 Engine을 포함
+					Car는 Engine에 의존하는 관계 표현
+						의존하는 Engine 객체를 Car에게 주입하는 상황 : 의존 객체 주입(Dependency Injection) )
+		설정 파일
+			- spring bean등록 
+			
+		Test.java
+			- 실행 클래스
+			
+-------------------------------------------------------------------------
+1. 설정으로 인한 객체 관계 및 개수 이해하기
+	test 하는 자바 코드 : 객체 내부에 toString() 
+	Customer c = context.getBean("c1",Customer.class);
+	System.out.println(c);
+		
+	Customer c2 = context.getBean("c1",Customer.class);
+	System.out.println(c2);
+		
+	System.out.println(c.getCar());
+	System.out.println(c2.getCar());
+	
+	
+	1. 문제 1 : 1개
+	<bean id="car" class="model.domain.Car" scope="prototype">
+	<bean id="c1" class="model.domain.Customer" scope="singleton">
+		<constructor-arg ref="car" />
+	
+	2. 문제 2 : 2개
+	<bean id="car" class="model.domain.Car" scope="singleton">
+	<bean id="c1" class="model.domain.Customer" scope="prototype">
+		<constructor-arg ref="car" />
+	
+	3. 문제 3 : 1개
+	<bean id="car" class="model.domain.Car" scope="singleton">
+	<bean id="c1" class="model.domain.Customer" scope="singleton">
+		<constructor-arg ref="car" />
+	
+	4. 문제 4 
+	<bean id="car" class="model.domain.Car" scope="prototype">
+	<bean id="c1" class="model.domain.Customer" scope="prototype">
+		<constructor-arg ref="car" />
+	

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- http://ip:80/step08_webBasic/index.html
+		http://ip:80/step08_webBasic/one
+			one에 매핑된 controller-> WEB-INF/finalview -->
+	<a href="one">one url로 이동(get 방식으로 요청)</a>
+</body>
+</html>

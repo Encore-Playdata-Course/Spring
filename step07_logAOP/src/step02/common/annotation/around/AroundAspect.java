@@ -1,0 +1,38 @@
+package step02.common.annotation.around;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import lombok.extern.slf4j.Slf4j;
+import step01.biz.annotation.Car;
+
+@Aspect
+@Component
+@Slf4j
+public class AroundAspect {
+	@Around("within(step01.biz.annotation.*)")
+	public Object aroundAspect(ProceedingJoinPoint point) {
+		// 전처리 - before
+		System.out.println("[공통 1] 구매를 시작 하실 건가요?");
+		
+		Object bizReturnValue = null;
+		// 핵심 로직 실행 & 예외
+		try {
+			bizReturnValue = point.proceed(); // 메소드명 무엇이든 무조건 핵심 메소드 호출하는 절대 코드
+			log.info(bizReturnValue.toString());
+		} catch (Throwable e) {
+			System.out.println("예외 발생 시 실행");
+			log.info("오류다 이자식아");
+		}
+		
+		// 후처리 - after/after returning
+		System.out.println("[공통 2] 구매를 완료 하셨습니다.");
+		
+		// 핵심 로직 실행 결과 리턴 
+		return bizReturnValue;
+	}
+}

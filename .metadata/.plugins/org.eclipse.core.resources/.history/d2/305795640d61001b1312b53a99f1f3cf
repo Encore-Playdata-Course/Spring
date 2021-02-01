@@ -1,0 +1,27 @@
+package step01.common.schema;
+
+//공통 기능의 클래스
+public class NoticeAspect {
+	
+	//구맨 전 처리 로직
+	public static void noticBuyStart() {
+		System.out.println("[공통 1] 구매를 시작 하실 건가요?");
+	}
+	
+	//구매 후 처리 로직
+	public static void noticBuyEnd() {
+		System.out.println("[공통 2] 구매를 완료 하셨습니다");
+	}
+	
+	//반환 시 공통 로직
+	
+	
+	
+	//예외 발생 시 실행되는 공통로직
+	/* 핵심 로직 실행 시 발생되는 예외를 일괄적으로 받아서 처리
+	 * 설계 - parameter로 발생되는 예외를 받아서 처리
+	 */
+	private void noticException(Exception e) {
+		System.out.println(e.getMessage());
+	}
+}

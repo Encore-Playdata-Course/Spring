@@ -1,0 +1,14 @@
+학습 내용
+
+1. 실습 구조
+	html -> spring framework -> sub controller -> jsp
+	
+2. 실습 내용
+	1 단계
+		기본 애노테이션 학습
+	
+	2 단계
+		URL Template
+		
+	3 단계
+		client의 상태 유지 기술

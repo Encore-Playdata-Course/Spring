@@ -1,0 +1,57 @@
+학습 내용
+
+1. MVC 기반의 Spring 개발 기술 습득
+
+2. 장점
+	코드가 굉장히 간소화
+      - jsp의 파일 위치와 확장자를 spring 설정파일에 일괄관리
+      - controller 코드에 file명만으로 간단하게 개발 가능
+      - 적용을 위한 설정 : 해당 기능의 spring api를 설정 파일에 등록
+  	개발속도 향상
+  	표준화 끝장판
+   		Spring MVC를 사용한 경우에 한해서만 보안을 고려해서 jsp의 위치가 WEB-INF에 있어도 실행 가능
+
+
+3. 구현 기술
+	1. 설정파일
+      1. web.sml
+         <servlet-name>dispatcher</servlet-name>
+      2. spring 자체 설정파일
+         web.xml에 DispatcherServlet에 부여한 별칭을 활용해서 "별칭-servlet.xml"파일명으로 작성
+         dispatcher-servlet.xml
+
+	2. spring이 제공하는 핵심 controller
+		 1. 구현하게 되는 설정 파일에 등록된 로직을 관리하게 되는 메인 controller
+		 2. front controller
+		 	중앙 집합해서 관리
+		 3. 구성
+		 	spring에서 제공하는 API - DispatcherServlet
+		 4. 사용을 위한 필수 설정
+		 	web.xml에 servlet으로 등록 필수
+		 5. DispatcherServlet API 특징
+		 	1. 사용자가 spring 설정 파일에 등록한 모든 내용 관리
+		 	2. 예외적으로 redirect로 화면 이동하는 경우엔 DispatcherServlet이 관여하지 않음
+		 		예시
+		 			return "redirect:*.jsp"; 
+			
+	3. sub controller
+		1. 애노테이션 베이스로 개발 절대 권장
+			@controller
+			
+		2. get/post 방식 요청 처리 또한 doGet or doPost 메소드가 아닌 애노테이션 설정된 일반 메소드가 처리
+			@RequestMapping("url명")
+			@RequestMapping(value="url명", method=RequestMethod.GET)
+			@RequestMapping(value="url명", method=RequestMethod.POST)
+			
+		3. forward/redirect 웹페이지 이동 방식도 문자열로 지정 또는 단순 return만으로 처리
+			1. forward 방식 사용한 API
+				ModelAndView
+					view 지정 : setViewName("prefix와 surfix 제외한 파일명만")
+					return이 forward 방식이동
+					
+			2. redirect 방식
+				반환 타입 - String
+				return "redirect:file명.jsp"
+				
+		4. request.setAttribute("key",value) 동일한 형식의 API 제공
+		

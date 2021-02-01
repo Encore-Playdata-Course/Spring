@@ -1,0 +1,17 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.ui.Model;
+
+import model.DAO;
+import model.domain.Car;
+import model.domain.Customer;
+
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println(DAO.getAll());
+	}
+
+}

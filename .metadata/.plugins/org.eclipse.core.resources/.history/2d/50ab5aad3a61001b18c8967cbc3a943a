@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<!-- 개발자 - jsp 위치에 대한 관리용 API 등록
+		Spring Framework - id값에 설정된 이름으로 이 객체를 활용
+			코드상에서 개발자가 getBean() 하는 일은 없음
+	-->
+	<bean id="viewResolver" class="org.springframework.web.servlet.DispatcherServlet">
+		 <!-- a.jsp라면 그냥 a만 쓰면 된다. -->
+      <property name="prefix" value="/WEB-INF/"/>
+      <property name="suffix" value=".jsp"/>
+
+	</bean>
+</beans>

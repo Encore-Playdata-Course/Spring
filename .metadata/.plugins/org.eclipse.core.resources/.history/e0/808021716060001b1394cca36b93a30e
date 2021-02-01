@@ -1,0 +1,38 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import model.domain.Car;
+import model.domain.Customer;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("playdata.xml");
+		
+		//step02 - 
+		Team t1 = context.getBean("Team", Team.class);
+		System.out.println(t1.hashCode());			//Customer 주소 값만 출력
+		System.out.println(t1.getCar().hashCode());	//
+		System.out.println(t1.hashCode());			//Customer 주소 값만 출력
+		System.out.println(t1.getCar2().hashCode());
+		
+		//case1 :Customer 스프링 빈 / car 스프링 빈이 아님
+		//cust1.setCar(new Car("a",77));
+		
+		//case2 :Customer 스프링 빈 / car 스프링 빈
+		//scope="prototype" Car는 언제 어떻게 Customer의 car변수에 대입(주입) 하나? 방식은 ??
+		
+		
+		
+		//step01 - @Component와 @Scope 연습만 진행
+//		Car c1 = context.getBean("car",Car.class);//@component
+//		Car c1 = context.getBean("c",Car.class); //@component("c")
+//		System.out.println(c1); 
+//		
+//		Car c2 = context.getBean("c",Car.class);
+//		System.out.println(c2);
+	}
+
+}

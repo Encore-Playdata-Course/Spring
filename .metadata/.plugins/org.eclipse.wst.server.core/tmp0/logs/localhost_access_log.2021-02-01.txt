@@ -1,0 +1,6 @@
+127.0.0.1 - - [01/Feb/2021:12:30:46 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [01/Feb/2021:12:30:47 +0900] "GET /step09_SpringMVC/WEB-INF/classes/controller/step03SessionTracking.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [01/Feb/2021:12:30:48 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [01/Feb/2021:12:32:12 +0900] "GET /step09_SpringMVC/step03.jsp HTTP/1.1" 200 738
+0:0:0:0:0:0:0:1 - - [01/Feb/2021:12:32:16 +0900] "GET /step09_SpringMVC/sessiontracking/cookietest HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [01/Feb/2021:12:32:16 +0900] "GET /step09_SpringMVC/step03cookieview.jsp?id=tester&age=100 HTTP/1.1" 200 161

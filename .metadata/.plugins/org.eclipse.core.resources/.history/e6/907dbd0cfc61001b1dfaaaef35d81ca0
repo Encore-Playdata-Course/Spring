@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>URI Template 기술 학습</h3>
+	
+	<br><hr><br>
+	1. 자원을 구분하기 위한 최적의 표현법 URI(URL) <br>
+	2. url을 동적으로 구성 가능한 기술의미 <br>
+	3. 형식 - http://ip:port/project[context]/고정표현법/{가변적인 표현법} <br>
+	http://ip:port/project[context]/고정표현법/{가변적인 표현법}/고정/{가변}... <br>
+	
+	<br><hr><br>
+	<a href="urlTest/playdata">1. urlTest/playdata</a> <br><br>
+	<a href="urlTest/mg">2. urlTest/mg</a> <br><br>
+	<a href="urlTest/encore">3. urlTest/encore</a> <br><br>
+</body>
+</html>

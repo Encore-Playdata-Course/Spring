@@ -1,0 +1,28 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+//다수의 공통된 용청하는 url을 일괄 설정
+@RequestMapping("sessiontracking")
+public class step03SessionTracking {
+	
+	/* 쿠키 정보를 spring에서 활용 가능한 기술 
+	 * Cookie c = new Cookie("id","cookieData");
+	 * 이미  id로 cookieData를 client 시스템에 저장되어 있는 상태
+	 * */
+	//<a href="sessiontracking/cookietest">
+	@RequestMapping("/cookietest")
+	public String m1(@CookieValue("id") String idValue) {
+		System.out.println("m1() " + idValue);
+		return "redirect:/step03cookieview.jsp";
+	}
+	
+	@RequestMapping("/cookietest")
+	public String m1(@CookieValue("id") String idValue) {
+		System.out.println("m1() " + idValue);
+		return "redirect:/step03cookieview.jsp";
+	}
+}

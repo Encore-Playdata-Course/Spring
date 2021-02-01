@@ -1,0 +1,15 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import model.domain.Car;
+import model.domain.Customer;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

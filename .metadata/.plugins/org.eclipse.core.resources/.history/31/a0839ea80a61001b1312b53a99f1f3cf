@@ -1,0 +1,18 @@
+package running;
+
+import java.applet.Applet;
+import java.applet.AppletContext;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//? 컨테이너 생성
+		ApplicationContext context = new ClassPathXmlApplicationContext()
+		//? Car 빈객체
+		
+		
+	}
+
+}

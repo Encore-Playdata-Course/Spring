@@ -1,0 +1,31 @@
+학습 내용
+
+1. AOP
+
+2. Schema 기반으로 실습
+	- xml 기반 설정
+	
+3. 장점
+	- 중복 코드를 최소화 하는 가장 이상적인 구조
+	- biz로직 개발자는 biz로직에만 충실하게 개발
+	- 확장 시에 용이하게 적용
+	
+4. AOP
+	1. aspectj라는 Framework에서 적용해 놓은 관점 지향 프로그램의 로직과 코드를 활용해서 Spring에서 편집
+	2. AOP + OOP = Spring
+	3. spring에서 AOP를 메소드에만 적용
+	
+5. 참고
+	전자정부표준 Framework
+		- 정부 주도로 권장하는 스펙
+		- spring + mybatis + log4j ...
+		- 기업 및 대학 전산실에 적용
+		
+6. biz(core)에 고통로직(Aspect) 적용 시점
+	- 핵심 로직 호출 시에 실행
+	1. before - 핵심 로직 실행 전
+	2. after - 핵심 로직 실행 후
+	3. throwing = 예외 발생 - 핵심 로직 실행 중 예외 발생
+	4. returning - 핵심 로직 정상 실행 되면서 반환 시 - 후처리
+	
+	5. around - 1~4 포괄적인 설정

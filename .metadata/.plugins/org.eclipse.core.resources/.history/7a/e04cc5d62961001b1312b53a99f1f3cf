@@ -1,0 +1,13 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
+[출처] [Spring] Slf4J와 logback 사용하기 / Slf4J란 / logback이란 / Slf4J와 logback 차이점|작성자 조이

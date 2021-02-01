@@ -1,0 +1,13 @@
+package running;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//? 컨테이너 생성
+		
+		//? Car 빈객체
+		
+		
+	}
+
+}

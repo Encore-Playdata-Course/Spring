@@ -1,0 +1,77 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@Controller
+public class Step01Controller {
+
+	//	<a href="hello1"> -> controller -> step01RedirectView.jsp
+	@RequestMapping("hello1")
+	public String m1() {
+		 System.out.println("m1()");
+		 return "redirect:step01RedirectView.jsp";
+	}
+	
+	//<a href="hello2">
+	@RequestMapping("hello2")
+	public ModelAndView m2() {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("newData","김민건");
+		mv.setViewName("step01hello2");
+		return mv; //forward 방식으로 jsp
+	}
+	
+	//<a href="hello3">
+	@RequestMapping("hello3")
+	public String m3() throws Exception{
+		System.out.println("m3()");
+		if(true) {
+			throw new Exception("예외 처리 학습");
+		}
+		return null;
+	}
+	
+	//예외 전담 처리 메소드 - exception handling 메소드
+	//예외 타입 설정 - Exception 타입으로 test
+	@ExceptionHandler
+	public String handler(Exception e) {
+		System.out.println("handler()");
+		System.out.println(e.getMessage());
+		return "redirect:failView.jsp";
+	}
+	
+	//redirect 로 웹페이지 이동 시에도 parameter 값 적용 가능한 기술
+	//<a href="hello4">
+	@RequestMapping("hello4")
+	public String m4(RedirectAttributes attr) {
+		System.out.println("m4()");
+		
+		//web querystring 구성과 동일
+		//request.getParameter("newData") or ${param.newData}
+		attr.addAttribute("newData","redirect data");
+		return "redirect:step01hello4.jsp";
+	}
+	
+	/* @RequestParam("id") String id 동일
+	 * 
+	 * 
+	 * @RequestParam("age") int age
+	 * 	int age = Integer.parseInt(request.getParameter("id"))
+	 * 
+	 * 결론 : request 객체 내에 저장된 web query String
+	 */
+	//<a href="hello5?id=tester&age=10">
+	@RequestMapping("hello5")
+	public String m5(@RequestParam("id") String id, @RequestParam("age") int age) {
+		System.out.println("m5() - "+id+" "+age);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("newData","m5()sava");
+		mv.setViewName("step01hello5");
+		
+	}
+}

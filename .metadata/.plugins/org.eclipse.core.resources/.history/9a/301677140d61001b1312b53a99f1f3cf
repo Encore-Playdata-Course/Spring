@@ -1,0 +1,24 @@
+package running;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import step01.biz.schema.Car;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//? 컨테이너 생성
+		ApplicationContext context = new ClassPathXmlApplicationContext("playdata.xml");
+		
+		//? Car 빈객체
+		Car car = context.getBean("biz",Car.class);
+		try {
+			car.saleMoney(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}

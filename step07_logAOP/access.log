@@ -1,0 +1,12 @@
+14:52 INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@246ae04d: startup date [Thu Jan 28 14:52:41 KST 2021]; root of context hierarchy
+14:52 INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [playdataaround.xml]
+14:52 INFO  s.c.annotation.around.AroundAspect - 자동차 구매 성공
+14:52 INFO  s.c.annotation.around.AroundAspect - 오류다 이자식아
+15:41 INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@246ae04d: startup date [Thu Jan 28 15:41:32 KST 2021]; root of context hierarchy
+15:41 INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [playdataaround.xml]
+15:41 INFO  s.c.annotation.around.AroundAspect - 자동차 구매 성공
+15:41 INFO  s.c.annotation.around.AroundAspect - 오류다 이자식아
+15:42 INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@246ae04d: startup date [Thu Jan 28 15:42:09 KST 2021]; root of context hierarchy
+15:42 INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [playdataaround.xml]
+15:42 INFO  s.c.annotation.around.AroundAspect - 자동차 구매 성공
+15:42 INFO  s.c.annotation.around.AroundAspect - 오류다 이자식아

@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="utf-8"%>
+    <%
+    	Cookie c = new Cookie("id", "cookieData");
+    	c.setMaxage(60*60);
+    	response.addCookie(c);
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+</body>
+</html>

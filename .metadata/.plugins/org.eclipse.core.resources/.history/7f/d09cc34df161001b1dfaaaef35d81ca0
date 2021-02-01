@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+/* a link 삭제 */
+a {
+	text -decoration : none;
+}
+</style>
+</head>
+<body>
+	
+	<h3>step01 : Spring MVC Annotation</h3>
+	
+	<br><hr><br>
+	
+	<a href="hello1">1. hello1요청 - jsp로 redirect 웹페이지 이동</a> <br>
+	<a href="hello2">2. hello2요청 - ModelAndView API, step01hello2.jsp</a><br>
+	<a href="hello3">2. hello3요청 - spring 기반의 예외 처리</a><br>
+	<a href="hello4">2. hello4요청 - redirect시에  parameter값 적용 가능한 API : RedirectAttributes</a><br>
+	
+	<br><hr><br>
+	<a href="hello5?id=tester&age=10">5. id/age값을 서버에 전송</a> <br>
+</body>
+</html>
